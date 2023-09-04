@@ -1,6 +1,7 @@
 import React from "react";
 // import ProductPage from "./pages/ProductPage";
 import Counter from "./components/Counter";
+import { useState } from "react";
 
 function App() {
   // return (
@@ -14,10 +15,27 @@ function App() {
   // const Wrapper = React.createElement('div', {className : 'wrapper'}, Button);
   // return Wrapper;
 
+  const [num, setNum] = useState(0);
+  const [name, setName] = useState('');
+  const [isChecked, setIsChecked] = useState(false);
+  
+
   return (
-    // ProductPage 컴포넌트 렌더링
+
     <div>
-      <Counter /> 
+      <input type="number"
+      value={num} 
+      onChange={(e) => setNum(e.target.value)}/> <br/>
+
+      <input type="text"
+      value={name}
+      onChange={(e) => setName(e.target.value)}/> <br/>
+
+      <input type="checkbox"
+      value={isChecked}
+      onChange={(e) => setIsChecked(e.target.checked)}/>
+
+      {isChecked ? <span>체크됨</span> : <span>체크안됨</span>}
     </div>
   )
 
