@@ -1,0 +1,18 @@
+State
+- 컴포넌트 내부의 **변화하는 값**
+
+UseState
+- 인자에는 state의 초기값으로 세팅할 값이 들어감
+- useState 함수는 배열을 반환
+  * 0번째 인덱스에는 state 값
+  * 1번째 인덱스에는 state를 업데이터할 떄 사용하는 함수(setter)
+- const (count, setCount) = useState(0);
+
+UseState 규칙
+- state 값은 반드시 setter 함수로만 변경 가능
+- setter 함수는 state 이름 앞에 set을 붙이는 식으로 (ex. setCount)
+
+왜 useState를 사용하는가?
+- 일반변수는 *랜더링을 일으킬 trigger가 없다
+  * 랜더링 : 가장 최신 상태의 컴포넌트를 가져오기 위해 컴포넌트를 실행하는 것
+  * 랜더링 발생 -> 1.최초 앱 실행(또는 새로고침), 2.state값이 변경되었을 때
