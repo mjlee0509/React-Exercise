@@ -3,13 +3,14 @@ import React from "react";
 import Counter from "./components/Counter";
 import { useState } from "react";
 import List from "./components/List";
+import CounterEx from "./components/CounterEx";
 
 function App() {
   
   return (
 
     <div>
-      <List />
+      <CounterEx />
     </div>
   )
 
