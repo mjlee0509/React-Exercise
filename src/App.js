@@ -1,5 +1,6 @@
 import React from "react";
-import ProductPage from "./pages/ProductPage";
+// import ProductPage from "./pages/ProductPage";
+import Counter from "./components/Counter";
 
 function App() {
   // return (
@@ -16,7 +17,7 @@ function App() {
   return (
     // ProductPage 컴포넌트 렌더링
     <div>
-      <ProductPage /> 
+      <Counter /> 
     </div>
   )
 
